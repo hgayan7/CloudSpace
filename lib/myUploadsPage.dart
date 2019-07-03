@@ -12,8 +12,6 @@ class _MyUploadsPageState extends State<MyUploadsPage> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-
-    /*24 is for notification bar on Android*/
     final double itemHeight = (size.height - kToolbarHeight - 24) / 2;
     final double itemWidth = size.width / 2;
     return MaterialApp(
@@ -30,7 +28,6 @@ class _MyUploadsPageState extends State<MyUploadsPage> {
               if (snapshot.hasData) {
                 Map<dynamic, dynamic> map = snapshot.data.snapshot.value;
                 map.forEach((dynamic, v) => print(v["link"]));
-
                 return GridView.builder(
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       childAspectRatio: (2*itemWidth / itemHeight),
@@ -48,7 +45,6 @@ class _MyUploadsPageState extends State<MyUploadsPage> {
                 );
               } else {
                 return Center(
-
                   child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
