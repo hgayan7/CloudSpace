@@ -31,14 +31,18 @@ class _MyUploadsPageState extends State<MyUploadsPage> {
                 return GridView.builder(
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       childAspectRatio: (2*itemWidth / itemHeight),
-                    crossAxisSpacing: 4,
+                      crossAxisSpacing: 4,
                       crossAxisCount: 2),
                   itemCount: map.values.toList().length,
                   padding: EdgeInsets.all(6.0),
                   itemBuilder: (BuildContext context, int index) {
                     return GridTile(
-                        child: Image.network(
-                          map.values.toList()[index]["link"],
+                        child: SizedBox.expand(
+                            child: Image.network(
+                              map.values.toList()[index]["link"],
+                              fit: BoxFit.fill,
+                            ),
+
                         ),
                     ) ;
                     },
