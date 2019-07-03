@@ -20,17 +20,18 @@ Cloud storage provider app.
   <img width="300" height="500" src="https://user-images.githubusercontent.com/29502161/60599366-f7a1aa80-9dcb-11e9-97c6-f9377f996fe3.png" hspace="20">	
 </p>
 
-## Steps to use this repo :
-
-### 1. Clone this repo.
-### 2. Add your google-services.json under the app directory of your Android project.
-### 3. Use it.
-
 ```
+
 Firebase Storage is used to save the images.
 Firebase Realtime Database is used to store the download links of the images so that it can be fetched at once.
 
 ```
+## Steps to use this repo :
+
+#### 1. Clone this repo.
+#### 2. Add your google-services.json under the app directory of your Android project.
+#### 3. Use it.
+
 
 ## License
 
