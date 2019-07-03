@@ -6,4 +6,48 @@ Cloud storage provider app.
 
 ```
 
-#### Work in progress
+## Screenshots
+
+<p align="center" >
+  <img width="300" height="500" src="https://user-images.githubusercontent.com/29502161/60599362-f7091400-9dcb-11e9-97cd-270950b26d9e.png" hspace="20">
+  <img width="300" height="500" src="https://user-images.githubusercontent.com/29502161/60599364-f7a1aa80-9dcb-11e9-85c2-150dd178dc47.png" hspace="20">	
+</p>
+
+
+
+<p align="center" >
+  <img width="300" height="500" src="https://user-images.githubusercontent.com/29502161/60599360-f7091400-9dcb-11e9-9d21-9c79a16066ca.png" hspace="20">
+  <img width="300" height="500" src="https://user-images.githubusercontent.com/29502161/60599366-f7a1aa80-9dcb-11e9-97c6-f9377f996fe3.png" hspace="20">	
+</p>
+
+## Steps to use this repo :
+
+### 1. Clone this repo.
+### 2. Add your google-services.json under the app directory of your Android project.
+### 3. Use it.
+
+```
+Firebase Storage is used to save the images.
+Firebase Realtime Database is used to store the download links of the images so that it can be fetched at once.
+
+```
+
+## License
+
+```
+  Copyright 2019 Himshikhar Gayan
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+```
+
+
