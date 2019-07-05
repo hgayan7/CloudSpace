@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter_cloud_space/detailPage.dart';
 
 class MyUploadsPage extends StatefulWidget {
   @override
@@ -37,10 +39,17 @@ class _MyUploadsPageState extends State<MyUploadsPage> {
                   padding: EdgeInsets.all(6.0),
                   itemBuilder: (BuildContext context, int index) {
                     return GridTile(
-                        child: SizedBox.expand(
-                            child: Image.network(
-                              map.values.toList()[index]["link"],
-                              fit: BoxFit.fill,
+                        child: InkResponse(
+                          onTap: (){
+                            Navigator.push(context, CupertinoPageRoute(
+                            builder: (context) => DetailPage(url : map.values.toList()[index]["link"].toString())
+                          ));
+                          },
+                          child: SizedBox.expand(
+                              child: Image.network(
+                                map.values.toList()[index]["link"],
+                                fit: BoxFit.fill,
+                              ),
                             ),
 
                         ),
