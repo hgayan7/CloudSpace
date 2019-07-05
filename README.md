@@ -20,11 +20,12 @@ Cloud storage provider app.
 </p>
 
 
- <img width="300" height="500" src="https://user-images.githubusercontent.com/29502161/60599366-f7a1aa80-9dcb-11e9-97c6-f9377f996fe3.png" hspace="20">	
-</p>
+	
+
 <p align="center" >
+   <img width="300" height="500" src="https://user-images.githubusercontent.com/29502161/60599366-f7a1aa80-9dcb-11e9-97c6-f9377f996fe3.png" hspace="20">
   <img width="300" height="500" src="https://user-images.githubusercontent.com/29502161/60739639-56a82080-9f80-11e9-9119-b76593948bcd.png" hspace="20">
- 
+ </p>
 
 ### Firebase Realtime Database Structure
 
