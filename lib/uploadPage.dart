@@ -1,9 +1,7 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'dart:io';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:firebase_database/firebase_database.dart';
 
@@ -11,7 +9,6 @@ class UploadPage extends StatefulWidget {
   @override
   _UploadPageState createState() => _UploadPageState();
 }
-
 class _UploadPageState extends State<UploadPage> {
 
   File file;
@@ -121,13 +118,12 @@ class _UploadPageState extends State<UploadPage> {
               left: 5,
               right: 5,
               child: Container(
-
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     Visibility(
                       visible: showProgressBar,
-                    child:  SpinKitFadingFour(color: Colors.white),
+                      child:  SpinKitFadingFour(color: Colors.white),
                     ),
                   ],
                 ),
@@ -216,6 +212,7 @@ class _UploadPageState extends State<UploadPage> {
   }
 
   Future<void> uploadToFirebaseStorage(filePath) async{
+
     setState(() {
       showProgressBar = true;
       path = path.split('/').last;
@@ -230,22 +227,16 @@ class _UploadPageState extends State<UploadPage> {
       file = null;
       uploadTime = DateTime.now().toString();
     });
-
-
     databaseRef.push().set(
         {
               "uploadTime": uploadTime,
               "link": downloadUrl,
         }
-
-
     );
-
     setState(() {
       path = null;
 
     });
 
   }
-
 }

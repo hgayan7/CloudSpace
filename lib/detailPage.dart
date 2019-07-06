@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'dart:io';
-import 'package:http/http.dart' show get;
-import 'package:path/path.dart';
+import 'package:dio/dio.dart';
 import 'package:path_provider/path_provider.dart';
 
 class DetailPage extends StatefulWidget {
@@ -59,14 +57,14 @@ class _DetailPageState extends State<DetailPage> {
     );
   }
 
-  void downloadImage() async{
-    var response = await get(widget.url);
+  Future<void> downloadImage() async {
+    Dio dio = Dio();
     var directory = await getApplicationDocumentsDirectory();
-    File file = new File(
-      join(directory.path,widget.url.split("/").last)
-    );
-    file.writeAsBytesSync(response.bodyBytes);
-    _scaffoldKey.currentState.showSnackBar(new SnackBar(content: new Text("Image downloaded")));
+    await dio.download(widget.url, "${directory.path}/myImage.jpg");
+    print(widget.url);
+    _scaffoldKey.currentState.showSnackBar(
+        new SnackBar(content: new Text("Image downloaded to $directory")));
   }
+
 }
 
